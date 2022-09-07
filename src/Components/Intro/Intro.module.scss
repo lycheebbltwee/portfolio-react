@@ -1,0 +1,32 @@
+@use "./../../Assets/partials/palette.scss";
+@use "./../../Assets/partials/devices.scss";
+
+.Intro {
+    color: palette.$accent-color;
+    width: 100vw;
+    padding: 0 1rem;
+
+    @include devices.phone {
+        height: 90vh;
+    }
+
+    h1 {
+        @include devices.phone {
+            font-size: 3rem;
+        }
+    }
+
+    &__pic {
+        @include devices.phone {
+            overflow: hidden;
+            height: 70vh;
+        }
+        img {
+            @include devices.phone {
+                height: 220%;
+                margin-top: -3.5rem;
+                margin-left: -5rem;
+            }
+        }
+    }
+}
