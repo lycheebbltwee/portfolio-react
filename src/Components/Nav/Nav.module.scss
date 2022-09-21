@@ -1,2 +1,129 @@
 @use "./../../Assets/partials/devices.scss";
 @use "./../../Assets/partials/palette.scss";
+
+.Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include devices.phone {
+        padding: 0.5rem 1rem;
+    }
+
+    @include devices.large-phone {
+        padding: 0.5rem 1rem;
+    }
+
+    @include devices.tablet {
+        padding: 1rem 1.2rem;
+    }
+
+    img {
+        height: 3.5rem;
+    }
+
+    &__visible {
+        visibility: visible;
+        position: fixed;
+        background-color: palette.$tint-lightest;
+        border-radius: 1.5rem;
+        text-align: center;
+
+        @include devices.phone {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            box-sizing: border-box;
+            height: 96vh;
+            width: 95vw;
+            padding: 6rem 3rem;
+        }
+
+        @include devices.large-phone {
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            box-sizing: border-box;
+            height: 96vh;
+            width: 95vw;
+            padding: 6rem 3rem;
+        }
+
+        @include devices.tablet {
+            top: 1rem;
+            right: 1rem;
+            left: auto;
+            bottom: auto;
+            padding: 1rem;
+            width: 56vw;
+            height: auto;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        @include devices.laptop {
+            width: 45vw;
+            padding: 0.7rem;
+        }
+
+        @include devices.desktop {
+            width: 33vw;
+        }
+    }
+
+    &__hidden {
+        visibility: hidden;
+        position: fixed;
+        right: 100%;
+    }
+
+    &__list {
+        list-style: none;
+        padding: 0;
+
+        @include devices.large-phone {
+            margin: 0;
+        }
+
+        @include devices.tablet {
+            display: flex;
+            width: 70%;
+            justify-content: space-evenly;
+        }
+
+        li {
+            @include devices.phone {
+                margin-bottom: 0.8rem;
+            }
+
+            @include devices.large-phone {
+                margin: 0;
+            }
+        }
+
+        a {
+            transition-duration: 200ms;
+
+            &:link {
+                text-decoration: none;
+            }
+
+            &:visited {
+                color: palette.$accent-color;
+            }
+
+            &:hover {
+                color: palette.$primary-color;
+            }
+
+            &:active {
+                color: palette.$primary-color;
+            }
+        }
+    }
+}
