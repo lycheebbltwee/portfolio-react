@@ -3,29 +3,146 @@
 
 .Intro {
     color: palette.$accent-color;
-    width: 100vw;
-    padding: 0 1rem;
+    width: auto;
+    font-family: lust, serif;
+    font-weight: 700;
+    font-style: normal;
+    overflow: hidden;
+    display: flex;
 
     @include devices.phone {
-        height: 90vh;
+        height: 88vh;
+        padding: 0 1rem;
+        flex-direction: column;
     }
 
-    h1 {
+    @include devices.large-phone {
+        height: 90vh;
+        padding: 0 1rem;
+    }
+
+    @include devices.tablet {
+        height: 35vh;
+        padding: 0 2rem;
+    }
+
+    @include devices.laptop {
+        height: 70vh;
+        padding: 0 4rem;
+    }
+
+    &__text {
+        display: flex;
+
         @include devices.phone {
-            font-size: 3rem;
+            height: inherit;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        @include devices.large-phone {
+            flex-direction: column;
+            width: calc((100% / 3) * 2);
+        }
+
+        @include devices.tablet {
+            justify-content: space-between;
+        }
+
+        @include devices.laptop {
+            justify-content: flex-start;
+        }
+
+        h1 {
+            color: palette.$accent-color;
+            @include devices.phone {
+                font-size: 4rem;
+                line-height: 4.2rem;
+                margin: 0;
+                margin-top: 1rem;
+            }
+
+            @include devices.large-phone {
+                font-size: 4.5rem;
+                line-height: 4.7rem;
+                margin: 0;
+                margin-top: 1rem;
+            }
+
+            @include devices.tablet {
+                font-size: 5rem;
+                line-height: 5.2rem;
+            }
+
+            @include devices.laptop {
+                font-size: 7rem;
+                line-height: 7.2rem;
+                width: 60vw;
+            }
+
+            @include devices.desktop {
+                font-size: 12rem;
+                line-height: 12.2rem;
+            }
+        }
+    }
+
+    &__jobTitle {
+        @include devices.phone {
+            width: 10.5rem;
+            margin-left: 7rem;
+            margin-bottom: 2rem;
+        }
+
+        @include devices.large-phone {
+            width: 10.5rem;
+            margin-left: 0;
         }
     }
 
     &__pic {
+        overflow: hidden;
+
         @include devices.phone {
-            overflow: hidden;
-            height: 70vh;
+            height: 20rem;
+            width: 100%;
+            margin-top: -20rem;
         }
+
+        @include devices.large-phone {
+            height: 100%;
+            width: 50%;
+            margin-left: -4rem;
+        }
+
+        @include devices.tablet {
+            margin-left: -5.8rem;
+        }
+
+        @include devices.laptop {
+            margin-left: 0rem;
+        }
+
         img {
             @include devices.phone {
+                height: 75vh;
+                margin-left: -25%;
+            }
+
+            @include devices.large-phone {
                 height: 220%;
-                margin-top: -3.5rem;
-                margin-left: -5rem;
+                margin-left: -30%;
+                text-align: right;
+            }
+
+            @include devices.tablet {
+                height: 240%;
+                margin-left: -36%;
+            }
+
+            @include devices.laptop {
+                height: 100%;
+                margin-left: -10%;
             }
         }
     }

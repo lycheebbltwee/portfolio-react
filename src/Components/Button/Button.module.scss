@@ -4,15 +4,21 @@
 .Button {
     font-family: inherit;
     font-size: 1rem;
-    color: palette.$accent-color;
+    color: palette.$primary-color;
     cursor: pointer;
     background-color: transparent;
-    border: 0.1rem solid palette.$accent-color;
+    border: 0.1rem solid palette.$primary-color;
     border-radius: 1.4rem;
     box-sizing: border-box;
     transition-duration: 200ms;
 
     @include devices.phone {
+        width: 5rem;
+        height: 2.5rem;
+        padding: 0.65rem 1.2rem;
+    }
+
+    @include devices.large-phone {
         width: 5rem;
         height: 2.5rem;
         padding: 0.65rem 1.2rem;
@@ -28,8 +34,8 @@
         @include devices.tablet {
             width: 6rem;
             padding: 0.75rem 1.7rem;
-            border-color: palette.$primary-color;
-            color: palette.$primary-color;
+            border-color: palette.$accent-color;
+            color: palette.$accent-color;
         }
     }
 }

@@ -1,0 +1,43 @@
+@use "./../../Assets/partials/palette.scss";
+@use "./../../Assets/partials/devices.scss";
+
+.IconGrid {
+    color: palette.$accent-color;
+    background-color: palette.$tint-light;
+    border-radius: 1rem;
+    height: auto;
+
+    @include devices.phone {
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    @include devices.large-phone {
+        margin: 0 1rem;
+        padding: 1rem;
+    }
+
+    p {
+        margin-top: 0.4rem;
+    }
+
+    &__grid {
+        display: grid;
+        width: 100%;
+        column-gap: 0.5rem;
+        row-gap: 0.5rem;
+        justify-items: center;
+
+        @include devices.phone {
+            grid-template-columns: repeat(5, 1fr);
+        }
+
+        @include devices.large-phone {
+            grid-template-columns: repeat(6, 1fr);
+        }
+
+        @include devices.tablet {
+            grid-template-columns: repeat(7, 1fr);
+        }
+    }
+}

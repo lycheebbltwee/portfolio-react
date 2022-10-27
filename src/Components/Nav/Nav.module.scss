@@ -8,14 +8,25 @@
 
     @include devices.phone {
         padding: 0.5rem 1rem;
+        margin-top: 1%;
     }
 
     @include devices.large-phone {
         padding: 0.5rem 1rem;
+        margin-top: 1%;
     }
 
     @include devices.tablet {
         padding: 1rem 1.2rem;
+        margin-top: 2%;
+    }
+
+    @include devices.laptop {
+        margin-top: 3%;
+    }
+
+    @include devices.desktop {
+        margin-top: 5%;
     }
 
     img {
@@ -28,6 +39,7 @@
         background-color: palette.$tint-lightest;
         border-radius: 1.5rem;
         text-align: center;
+        z-index: 99;
 
         @include devices.phone {
             top: 0;
@@ -50,7 +62,7 @@
             box-sizing: border-box;
             height: 96vh;
             width: 95vw;
-            padding: 6rem 3rem;
+            padding: 5rem 3rem;
         }
 
         @include devices.tablet {
@@ -103,6 +115,7 @@
 
             @include devices.large-phone {
                 margin: 0;
+                margin: 1rem 0;
             }
         }
 
@@ -114,15 +127,15 @@
             }
 
             &:visited {
-                color: palette.$accent-color;
+                color: palette.$primary-color;
             }
 
             &:hover {
-                color: palette.$primary-color;
+                color: palette.$accent-color;
             }
 
             &:active {
-                color: palette.$primary-color;
+                color: palette.$accent-color;
             }
         }
     }

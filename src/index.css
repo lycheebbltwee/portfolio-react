@@ -1,29 +1,36 @@
 html {
     overflow-x: hidden;
-    overflow-y: hidden;
     height: 100vh;
     max-width: 1600px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     margin: 0;
     padding: 0;
-    font-family: roc-grotesk, sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 16px;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     background-color: #f9e8de;
     overflow-x: hidden;
-    overflow-y: hidden;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }
 
 h1,
 h2,
 h3,
 h4 {
-    font-family: roc-grotesk-extrawide, sans-serif;
+    font-family: lust, serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+p {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
 }

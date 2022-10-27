@@ -1,6 +1,6 @@
 import { navData } from "./navData";
 import { Link } from "react-router-dom";
-import lycheeIcon from "./../../Assets/images/logo_colour2.svg";
+import lycheeIcon from "./../../Assets/images/logo_colour.svg";
 import styles from "./Nav.module.scss";
 import { useState } from "react";
 import Button from "../Button";
